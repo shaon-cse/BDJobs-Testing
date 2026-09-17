@@ -9,6 +9,21 @@ This repository contains Software Quality Assurance (SQA) testing documentation 
 
 ---
 
+## Bug Findings
+
+During testing, the following issues were identified on production:
+
+| # | Module | Issue | Severity | Priority |
+|---|--------|-------|----------|----------|
+| 1 | Create Account | Invalid email format (e.g. `shaon@te`) is accepted and account is registered successfully instead of showing a validation error | Major | High |
+| 2 | Sign In | Invalid email format is not validated at Sign In; instead of a format error, system shows "Couldn't find your Bdjobs Account!" | Minor | Medium |
+| 3 | Sign In | Numeric-only usernames create ambiguity with mobile number lookups — entering a digit string matching an existing username fetches that account instead of validating it as an invalid mobile number | Minor (Suggestion) | Medium |
+| 4 | Sign In | No account lockout or captcha triggered after 6–7 consecutive failed login attempts, posing a potential security/brute-force risk | Critical | High |
+
+Full reproduction steps, screenshots, and expected vs. actual behavior for each issue are documented in the **Bug Report** sheet of `BDJobs-Testing.xlsx`.
+
+---
+
 ## Project Files
 
 ### Testing Documentation
@@ -45,33 +60,10 @@ This Excel file contains multiple QA artifacts organized into separate sheets:
 ## Tools Used
 - Microsoft Excel
 - Manual Testing Techniques
-- Mind Mapping Tool
+- Mind Mapping Tool- XMind
 - Browser Developer Tools
 - Screenshot Documentation
 
 ---
 
 ## Repository Structure
-BDJobs-Testing
-│
-├── BDJobs-Testing.xlsx
-├── BDJobs-TestPlan.pdf
-├── Mind Map.png
-├── BDJobs Bug Screenshot
-├── BDJobs Logo.png
-└── README.md
-
-
----
-
-## Author
-
-**Shaon Kumer Paul**  
-Computer Science & Engineering Graduate  
-
-Interested in **Software Quality Assurance, Web Development, and Software Engineering**.
-
----
-
-## Purpose
-This project was created for **learning and portfolio purposes** to demonstrate practical experience in **software testing and QA documentation**.
